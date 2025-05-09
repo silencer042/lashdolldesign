@@ -170,7 +170,7 @@ const allServices = {
       icon: <i className="fas fa-magic"></i>,
       benefits: ["Tames unruly brows", "Creates fuller appearance", "Lasts 4-6 weeks"],
       aftercare: ["Keep brows dry for 24 hours", "Avoid makeup and skincare on brows", "Apply conditioning serum"],
-      image: "https://images.unsplash.com/photo-1621346653400-a538e884cb4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Brow Lamination.png"
     }
   ],
   facials: [
@@ -184,7 +184,7 @@ const allServices = {
       icon: <i className="fas fa-sparkles"></i>,
       benefits: ["Removes peach fuzz", "Immediately smoother skin", "Enhanced product absorption"],
       aftercare: ["Avoid sun exposure", "Use gentle skincare products", "Apply SPF daily"],
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Dermaplaning.png"
     },
     {
       id: "microneedling",
@@ -196,7 +196,7 @@ const allServices = {
       icon: <i className="fas fa-syringe"></i>,
       benefits: ["Reduces fine lines", "Improves acne scars", "Stimulates collagen production"],
       aftercare: ["Avoid sun exposure", "No makeup for 24 hours", "Use gentle, hydrating products"],
-      image: "https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Microneedling.png"
     },
     {
       id: "glass-skin",
@@ -208,7 +208,7 @@ const allServices = {
       icon: <i className="fas fa-gem"></i>,
       benefits: ["Intense hydration", "Dewy, luminous finish", "Refined pore appearance"],
       aftercare: ["Continue hydration routine", "Use lightweight products", "Apply SPF daily"],
-      image: "https://images.unsplash.com/photo-1501644898242-cfea53d90933?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Glass Skin Facial.png"
     }
   ],
   "anti-wrinkle": [
@@ -222,7 +222,7 @@ const allServices = {
       icon: <i className="fas fa-wind"></i>,
       benefits: ["Smooths fine lines", "Prevents new wrinkles", "Natural-looking results"],
       aftercare: ["No lying down for 4 hours", "Avoid exercise for 24 hours", "No facial massages for 2 weeks"],
-      image: "https://images.unsplash.com/photo-1571745544682-acbffefff95a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Anti-Wrinkle Treatment.png"
     },
     {
       id: "lip-fillers",
@@ -235,7 +235,7 @@ const allServices = {
       benefits: ["Customizable volume", "Defined lip contour", "Results last 6-12 months"],
       aftercare: ["Apply ice to reduce swelling", "Avoid extreme heat", "No strenuous exercise for 24 hours"],
       contraindications: ["Pregnancy or breastfeeding", "Active skin infections", "Certain autoimmune disorders"],
-      image: "https://images.unsplash.com/photo-1575379774254-3dc27db6f389?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Lip Fillers.png"
     },
     {
       id: "dermal-fillers",
@@ -247,7 +247,7 @@ const allServices = {
       icon: <i className="fas fa-magic"></i>,
       benefits: ["Immediate results", "Natural-looking volume", "Reduced appearance of lines"],
       aftercare: ["Avoid makeup for 12 hours", "No alcohol for 24 hours", "Avoid sun exposure"],
-      image: "https://images.unsplash.com/photo-1508387104394-d13e1b497f85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Dermal Fillers.png"
     }
   ]
 };
@@ -274,7 +274,7 @@ const serviceBundles: ServiceBundle[] = [
     saving: "Save £10",
     services: ["Lash Lift & Tint", "Brow Lamination"],
     duration: "90 minutes",
-    image: "https://images.unsplash.com/photo-1531042564476-14d5d9bfbc76?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "/attached_assets/lash lift & tint.png"
   },
   {
     id: "facial-botox-bundle",
@@ -284,7 +284,7 @@ const serviceBundles: ServiceBundle[] = [
     saving: "Save £35",
     services: ["Glass Skin Facial", "Anti-Wrinkle Treatment (1 area)"],
     duration: "105 minutes",
-    image: "https://images.unsplash.com/photo-1595058068372-569f92acde51?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "/attached_assets/Glass Skin Facial.png"
   }
 ];
 
