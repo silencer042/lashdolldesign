@@ -4,17 +4,17 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="pt-24 md:pt-0 relative bg-soft-texture">
-      {/* Background Image */}
+      {/* Background Image - Lash Model */}
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1607006344380-b6775a0824a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80')",
-          filter: "brightness(0.9)"
+          backgroundImage: "url('https://images.unsplash.com/photo-1570003179394-40b59f9b4a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
+          filter: "brightness(0.85)"
         }}
       />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-accent/60" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/75 to-accent/65" />
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="min-h-screen flex flex-col justify-center items-start py-20 md:w-2/3 lg:w-1/2">

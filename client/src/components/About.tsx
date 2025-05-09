@@ -17,8 +17,8 @@ export default function About() {
           >
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=800" 
-                alt="About Lash Doll Nottingham" 
+                src="/attached_assets/lush1.avif" 
+                alt="Lash Doll Nottingham Beauty Experience" 
                 className="rounded-xl shadow-lg w-full h-auto object-cover z-10 relative"
               />
               {/* Decorative element */}

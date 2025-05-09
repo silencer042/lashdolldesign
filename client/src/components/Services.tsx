@@ -44,14 +44,23 @@ interface BaseService {
 }
 
 interface MicrobladingService extends BaseService {
-  precare?: string[];
+  precare: string[];
 }
 
 interface FillerService extends BaseService {
-  contraindications?: string[];
+  contraindications: string[];
 }
 
 type Service = BaseService | MicrobladingService | FillerService;
+
+// Type guards
+function hasPrecareInstructions(service: Service): service is MicrobladingService {
+  return 'precare' in service && Array.isArray((service as MicrobladingService).precare);
+}
+
+function hasContraindications(service: Service): service is FillerService {
+  return 'contraindications' in service && Array.isArray((service as FillerService).contraindications);
+}
 
 // Service categories
 const categories: ServiceCategory[] = [
@@ -420,7 +429,7 @@ export default function Services() {
                                       ))}
                                     </ul>
                                     
-                                    {service.precare && (
+                                    {hasPrecareInstructions(service) && (
                                       <>
                                         <h4 className="font-semibold text-foreground mb-2 mt-4">Before your appointment:</h4>
                                         <ul>
@@ -434,7 +443,7 @@ export default function Services() {
                                       </>
                                     )}
                                     
-                                    {service.contraindications && (
+                                    {hasContraindications(service) && (
                                       <>
                                         <h4 className="font-semibold text-foreground mb-2 mt-4">Not recommended if:</h4>
                                         <ul>
