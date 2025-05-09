@@ -274,7 +274,7 @@ const serviceBundles: ServiceBundle[] = [
     saving: "Save £10",
     services: ["Lash Lift & Tint", "Brow Lamination"],
     duration: "90 minutes",
-    image: "@assets/lash lift & tint.png"
+    image: "@assets/Lash & Brow Bundle.png"
   },
   {
     id: "facial-botox-bundle",
@@ -284,7 +284,7 @@ const serviceBundles: ServiceBundle[] = [
     saving: "Save £35",
     services: ["Glass Skin Facial", "Anti-Wrinkle Treatment (1 area)"],
     duration: "105 minutes",
-    image: "@assets/Glass Skin Facial.png"
+    image: "@assets/Rejuvenation Package.png"
   }
 ];
 
