@@ -71,7 +71,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gradient-pink/5">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,10 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center font-serif mb-4">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center font-serif-italic mb-4">Get In Touch</h2>
+          <div className="flex justify-center mb-4">
+            <div className="w-20 h-1 bg-accent"></div>
+          </div>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
             We'd love to hear from you! Book your appointment or send us a message.
           </p>
@@ -94,62 +97,67 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Card className="h-full bg-accent/10 border-0">
+            <Card className="h-full bg-accent/5 border-0 soft-shadow rounded-2xl overflow-hidden">
+              <div className="h-40 relative">
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522337094846-8a818192de1f?auto=format&fit=crop&w=800&q=80')" }}></div>
+                <div className="absolute inset-0 bg-gradient-gold opacity-40"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h3 className="text-3xl font-bold font-serif-italic text-white">Contact Details</h3>
+                </div>
+              </div>
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold font-serif mb-6">Contact Information</h3>
-                
-                <div className="flex items-start mb-6">
-                  <div className="bg-primary rounded-full p-2 mr-4 mt-1 text-white">
-                    <i className="fas fa-map-marker-alt"></i>
+                <div className="flex items-start mb-8">
+                  <div className="bg-gradient-gold rounded-full p-3 mr-5 text-accent-foreground">
+                    <i className="fas fa-map-marker-alt text-lg"></i>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Visit Us</h4>
+                    <h4 className="font-semibold text-lg mb-1">Visit Us</h4>
                     <p className="text-foreground/80">15 Beauty Street, Nottingham, NG1 1AB</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start mb-6">
-                  <div className="bg-primary rounded-full p-2 mr-4 mt-1 text-white">
-                    <i className="fas fa-phone"></i>
+                <div className="flex items-start mb-8">
+                  <div className="bg-gradient-gold rounded-full p-3 mr-5 text-accent-foreground">
+                    <i className="fas fa-phone text-lg"></i>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Call Us</h4>
+                    <h4 className="font-semibold text-lg mb-1">Call Us</h4>
                     <p className="text-foreground/80">+44 7123 456789</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start mb-6">
-                  <div className="bg-primary rounded-full p-2 mr-4 mt-1 text-white">
-                    <i className="fas fa-envelope"></i>
+                <div className="flex items-start mb-8">
+                  <div className="bg-gradient-gold rounded-full p-3 mr-5 text-accent-foreground">
+                    <i className="fas fa-envelope text-lg"></i>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Email Us</h4>
+                    <h4 className="font-semibold text-lg mb-1">Email Us</h4>
                     <p className="text-foreground/80">info@lashdollnottingham.com</p>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold font-serif mt-8 mb-4">Opening Hours</h3>
-                <div className="grid grid-cols-2 gap-2">
-                  <div>
+                <h3 className="text-xl font-bold font-serif-italic mt-8 mb-6">Opening Hours</h3>
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="flex justify-between items-center border-b border-accent/10 pb-3">
                     <p className="font-semibold">Monday - Friday</p>
                     <p className="text-foreground/80">10:00 AM - 7:00 PM</p>
                   </div>
-                  <div>
+                  <div className="flex justify-between items-center border-b border-accent/10 pb-3">
                     <p className="font-semibold">Saturday</p>
                     <p className="text-foreground/80">9:00 AM - 6:00 PM</p>
                   </div>
-                  <div>
+                  <div className="flex justify-between items-center border-b border-accent/10 pb-3">
                     <p className="font-semibold">Sunday</p>
                     <p className="text-foreground/80">10:00 AM - 4:00 PM</p>
                   </div>
                 </div>
                 
-                <div className="flex mt-8 space-x-4">
+                <div className="flex mt-10 space-x-4 justify-center">
                   <a 
                     href="https://instagram.com" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="bg-primary hover:bg-primary/90 text-white rounded-full p-3 transition duration-300"
+                    className="bg-gradient-gold hover:bg-accent text-accent-foreground rounded-full p-3 transition-all duration-300 gold-glow"
                     aria-label="Instagram"
                   >
                     <i className="fab fa-instagram"></i>
@@ -158,7 +166,7 @@ export default function Contact() {
                     href="https://facebook.com" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="bg-primary hover:bg-primary/90 text-white rounded-full p-3 transition duration-300"
+                    className="bg-gradient-gold hover:bg-accent text-accent-foreground rounded-full p-3 transition-all duration-300 gold-glow"
                     aria-label="Facebook"
                   >
                     <i className="fab fa-facebook-f"></i>
@@ -167,7 +175,7 @@ export default function Contact() {
                     href="https://tiktok.com" 
                     target="_blank" 
                     rel="noreferrer"
-                    className="bg-primary hover:bg-primary/90 text-white rounded-full p-3 transition duration-300"
+                    className="bg-gradient-gold hover:bg-accent text-accent-foreground rounded-full p-3 transition-all duration-300 gold-glow"
                     aria-label="TikTok"
                   >
                     <i className="fab fa-tiktok"></i>
@@ -186,10 +194,15 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <Card className="h-full border-0 shadow-md">
+            <Card className="h-full border-0 soft-shadow rounded-2xl overflow-hidden">
+              <div className="h-40 relative">
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80')" }}></div>
+                <div className="absolute inset-0 bg-gradient-pink opacity-60"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h3 className="text-3xl font-bold font-serif-italic text-white">Book Your Appointment</h3>
+                </div>
+              </div>
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold font-serif mb-6">Send Message</h3>
-                
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <FormField
@@ -197,12 +210,12 @@ export default function Contact() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Your Name</FormLabel>
+                          <FormLabel className="text-foreground/90 font-medium">Your Name</FormLabel>
                           <FormControl>
                             <Input 
                               placeholder="Enter your full name" 
                               {...field} 
-                              className="w-full px-4 py-3 rounded-lg focus:ring-primary"
+                              className="w-full px-4 py-6 rounded-xl focus:ring-accent border-input/50 hover-glow"
                             />
                           </FormControl>
                           <FormMessage />
@@ -210,56 +223,58 @@ export default function Contact() {
                       )}
                     />
                     
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Your Email</FormLabel>
-                          <FormControl>
-                            <Input 
-                              type="email" 
-                              placeholder="Enter your email address" 
-                              {...field} 
-                              className="w-full px-4 py-3 rounded-lg focus:ring-primary"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Your Phone</FormLabel>
-                          <FormControl>
-                            <Input 
-                              type="tel" 
-                              placeholder="Enter your phone number" 
-                              {...field} 
-                              className="w-full px-4 py-3 rounded-lg focus:ring-primary"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground/90 font-medium">Your Email</FormLabel>
+                            <FormControl>
+                              <Input 
+                                type="email" 
+                                placeholder="Enter your email address" 
+                                {...field} 
+                                className="w-full px-4 py-6 rounded-xl focus:ring-accent border-input/50 hover-glow"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground/90 font-medium">Your Phone</FormLabel>
+                            <FormControl>
+                              <Input 
+                                type="tel" 
+                                placeholder="Enter your phone number" 
+                                {...field} 
+                                className="w-full px-4 py-6 rounded-xl focus:ring-accent border-input/50 hover-glow"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
                     
                     <FormField
                       control={form.control}
                       name="service"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Service Interest</FormLabel>
+                          <FormLabel className="text-foreground/90 font-medium">Service Interest</FormLabel>
                           <Select 
                             onValueChange={field.onChange} 
                             defaultValue={field.value}
                           >
                             <FormControl>
-                              <SelectTrigger className="w-full px-4 py-3 rounded-lg focus:ring-primary">
+                              <SelectTrigger className="w-full px-4 py-6 rounded-xl focus:ring-accent border-input/50 hover-glow">
                                 <SelectValue placeholder="Select a service" />
                               </SelectTrigger>
                             </FormControl>
@@ -281,13 +296,13 @@ export default function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Your Message</FormLabel>
+                          <FormLabel className="text-foreground/90 font-medium">Your Message</FormLabel>
                           <FormControl>
                             <Textarea 
                               placeholder="Tell us what you're looking for..." 
                               rows={4} 
                               {...field} 
-                              className="w-full px-4 py-3 rounded-lg focus:ring-primary resize-none"
+                              className="w-full px-4 py-3 rounded-xl focus:ring-accent border-input/50 hover-glow resize-none"
                             />
                           </FormControl>
                           <FormMessage />
@@ -295,13 +310,26 @@ export default function Contact() {
                       )}
                     />
                     
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-full"
-                      disabled={isSubmitting}
+                    <motion.div
+                      whileHover={{ scale: 1.03 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
-                      {isSubmitting ? "Sending..." : "Send Message"}
-                    </Button>
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-gradient-gold hover:bg-accent text-accent-foreground font-medium py-6 px-8 rounded-full gold-glow"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? (
+                          <span className="flex items-center">
+                            <i className="fas fa-circle-notch fa-spin mr-2"></i> Sending...
+                          </span>
+                        ) : (
+                          <span className="flex items-center">
+                            <i className="fas fa-paper-plane mr-2"></i> Book Appointment
+                          </span>
+                        )}
+                      </Button>
+                    </motion.div>
                   </form>
                 </Form>
               </CardContent>
