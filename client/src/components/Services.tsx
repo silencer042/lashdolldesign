@@ -23,8 +23,38 @@ import {
 } from "@/components/ui/accordion";
 import { Check, Clock, Star, Info, ChevronDown, ChevronUp, RefreshCw } from "lucide-react";
 
+// Define interfaces for our data structures
+interface ServiceCategory {
+  id: string;
+  label: string;
+  icon: React.ReactNode;
+}
+
+interface BaseService {
+  id: string;
+  title: string;
+  description: string;
+  longDescription: string;
+  price: string;
+  duration: string;
+  icon: React.ReactNode;
+  benefits: string[];
+  aftercare: string[];
+  image: string;
+}
+
+interface MicrobladingService extends BaseService {
+  precare?: string[];
+}
+
+interface FillerService extends BaseService {
+  contraindications?: string[];
+}
+
+type Service = BaseService | MicrobladingService | FillerService;
+
 // Service categories
-const categories = [
+const categories: ServiceCategory[] = [
   { id: "lashes", label: "Lashes", icon: <i className="fas fa-eye text-accent"></i> },
   { id: "microblading", label: "Microblading & Brows", icon: <i className="fas fa-paint-brush text-accent"></i> },
   { id: "facials", label: "Facial Treatments", icon: <i className="fas fa-spa text-accent"></i> },
@@ -44,7 +74,7 @@ const allServices = {
       icon: <i className="fas fa-eye"></i>,
       benefits: ["Natural-looking results", "Enhances your natural lashes", "Customized to your eye shape"],
       aftercare: ["Avoid water and steam for 24 hours", "Use oil-free products around eyes", "Don't rub or pull lashes"],
-      image: "https://pixabay.com/get/gf4c9bc70a2e49534dab0e0c191c5fd0796deaba3a3c746c2b6dcab5f219b16b2a196347cc9b7cb6f51c6908a19a2d7355465172699d8ccb2d23c123402ea6e2f_1280.jpg"
+      image: "https://images.unsplash.com/photo-1584271854089-9bb3e5168e32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "volume-lashes",
@@ -56,7 +86,7 @@ const allServices = {
       icon: <i className="fas fa-fan"></i>,
       benefits: ["Dramatic, fuller appearance", "Customizable volume", "Lightweight comfort"],
       aftercare: ["Avoid oil-based products", "Gentle cleansing daily", "Regular infills every 2-3 weeks"],
-      image: "https://images.unsplash.com/photo-1551803091-e20673f15770?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1587400788303-e65c4bbb42c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "hybrid-lashes",
@@ -68,7 +98,7 @@ const allServices = {
       icon: <i className="fas fa-star-half-alt"></i>,
       benefits: ["Natural fullness with texture", "Custom ratio for your desired look", "Best of both classic and volume"],
       aftercare: ["Avoid oil-based skincare", "No rubbing or pulling", "Regular infills every 2-3 weeks"],
-      image: "https://pixabay.com/get/g9d16a5c0307dc7d70ea503eafcba57dc51a05ef9b2d131729683ee44932f971497c9a305e365f9babbb70ef0a1b5c05d143f0855bae842f19ccaf345629146ea_1280.jpg"
+      image: "https://images.unsplash.com/photo-1561569626-8e5e27dd9823?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "lash-infills",
@@ -80,7 +110,7 @@ const allServices = {
       icon: <RefreshCw size={18} />,
       benefits: ["Maintains fullness", "More economical than a full set", "Extends the life of your lash extensions"],
       aftercare: ["Same aftercare as full sets", "Schedule regular infills", "Gentle cleansing to extend longevity"],
-      image: "https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1625992805557-605d0c0eec6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "lash-lift",
@@ -92,7 +122,7 @@ const allServices = {
       icon: <i className="fas fa-arrow-up"></i>,
       benefits: ["No maintenance required", "Lasts 6-8 weeks", "Enhances natural lashes"],
       aftercare: ["Keep lashes dry for 24 hours", "Avoid oil-based products", "No rubbing or harsh cleansers"],
-      image: "https://images.unsplash.com/photo-1593702288056-7ea9ed1598bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1493422884938-abd42cfa0f29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
   ],
   microblading: [
@@ -107,7 +137,7 @@ const allServices = {
       benefits: ["Natural-looking results", "Customized shape and color", "Semi-permanent (1-2 years)"],
       aftercare: ["Keep area dry for 7-10 days", "Avoid sun exposure", "No makeup on the area during healing"],
       precare: ["Avoid blood thinners", "No alcohol 24 hours before", "No tanning or sunburn"],
-      image: "https://images.unsplash.com/photo-1522337094846-8a818192de1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1633643092028-b80630a64187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "microblading-touchup",
@@ -119,7 +149,7 @@ const allServices = {
       icon: <i className="fas fa-sync-alt"></i>,
       benefits: ["Perfects initial results", "Extends longevity", "Adjusts color as needed"],
       aftercare: ["Same aftercare as initial treatment", "Avoid excessive sweating", "Protect from sun exposure"],
-      image: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1591687816303-0cdb7a301a50?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "brow-lamination",
@@ -131,7 +161,7 @@ const allServices = {
       icon: <i className="fas fa-magic"></i>,
       benefits: ["Tames unruly brows", "Creates fuller appearance", "Lasts 4-6 weeks"],
       aftercare: ["Keep brows dry for 24 hours", "Avoid makeup and skincare on brows", "Apply conditioning serum"],
-      image: "https://images.unsplash.com/photo-1578534421955-ef7854568e51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1621346653400-a538e884cb4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
   ],
   facials: [
@@ -145,7 +175,7 @@ const allServices = {
       icon: <i className="fas fa-sparkles"></i>,
       benefits: ["Removes peach fuzz", "Immediately smoother skin", "Enhanced product absorption"],
       aftercare: ["Avoid sun exposure", "Use gentle skincare products", "Apply SPF daily"],
-      image: "https://images.unsplash.com/photo-1560750588-73207b1ef5b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "microneedling",
@@ -157,7 +187,7 @@ const allServices = {
       icon: <i className="fas fa-syringe"></i>,
       benefits: ["Reduces fine lines", "Improves acne scars", "Stimulates collagen production"],
       aftercare: ["Avoid sun exposure", "No makeup for 24 hours", "Use gentle, hydrating products"],
-      image: "https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "glass-skin",
@@ -169,7 +199,7 @@ const allServices = {
       icon: <i className="fas fa-gem"></i>,
       benefits: ["Intense hydration", "Dewy, luminous finish", "Refined pore appearance"],
       aftercare: ["Continue hydration routine", "Use lightweight products", "Apply SPF daily"],
-      image: "https://images.unsplash.com/photo-1521203744147-422a5e13afb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1501644898242-cfea53d90933?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
   ],
   "anti-wrinkle": [
@@ -183,7 +213,7 @@ const allServices = {
       icon: <i className="fas fa-wind"></i>,
       benefits: ["Smooths fine lines", "Prevents new wrinkles", "Natural-looking results"],
       aftercare: ["No lying down for 4 hours", "Avoid exercise for 24 hours", "No facial massages for 2 weeks"],
-      image: "https://images.unsplash.com/photo-1619451683149-aa1875a71688?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1571745544682-acbffefff95a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "lip-fillers",
@@ -196,7 +226,7 @@ const allServices = {
       benefits: ["Customizable volume", "Defined lip contour", "Results last 6-12 months"],
       aftercare: ["Apply ice to reduce swelling", "Avoid extreme heat", "No strenuous exercise for 24 hours"],
       contraindications: ["Pregnancy or breastfeeding", "Active skin infections", "Certain autoimmune disorders"],
-      image: "https://images.unsplash.com/photo-1597225244660-1cd128c64284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1575379774254-3dc27db6f389?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "dermal-fillers",
@@ -208,13 +238,25 @@ const allServices = {
       icon: <i className="fas fa-magic"></i>,
       benefits: ["Immediate results", "Natural-looking volume", "Reduced appearance of lines"],
       aftercare: ["Avoid makeup for 12 hours", "No alcohol for 24 hours", "Avoid sun exposure"],
-      image: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+      image: "https://images.unsplash.com/photo-1508387104394-d13e1b497f85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
   ]
 };
 
+// Define a type for service bundles
+type ServiceBundle = {
+  id: string;
+  title: string;
+  description: string;
+  price: string;
+  saving: string;
+  services: string[];
+  duration: string;
+  image: string;
+};
+
 // Service bundles
-const serviceBundles = [
+const serviceBundles: ServiceBundle[] = [
   {
     id: "lash-brow-bundle",
     title: "Lash & Brow Bundle",
@@ -223,7 +265,7 @@ const serviceBundles = [
     saving: "Save £10",
     services: ["Lash Lift & Tint", "Brow Lamination"],
     duration: "90 minutes",
-    image: "https://images.unsplash.com/photo-1568339434343-bbf9bc0eb234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+    image: "https://images.unsplash.com/photo-1531042564476-14d5d9bfbc76?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "facial-botox-bundle",
@@ -233,7 +275,7 @@ const serviceBundles = [
     saving: "Save £35",
     services: ["Glass Skin Facial", "Anti-Wrinkle Treatment (1 area)"],
     duration: "105 minutes",
-    image: "https://images.unsplash.com/photo-1614159102526-9a3fb98cb1a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+    image: "https://images.unsplash.com/photo-1595058068372-569f92acde51?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   }
 ];
 

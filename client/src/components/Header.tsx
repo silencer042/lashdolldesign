@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,26 +17,44 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
-      <nav className="container mx-auto px-6 py-4">
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+      <nav className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <div className="text-3xl font-bold text-primary font-serif">Lash Doll</div>
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center"
+          >
+            <a href="#" className="block">
+              <img 
+                src="/attached_assets/Lushdoll logo.png" 
+                alt="Lash Doll Nottingham" 
+                className={`h-14 transition-all duration-300 ${isScrolled ? 'brightness-90' : 'brightness-100'}`}
+              />
+            </a>
+          </motion.div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <a href="#" className="text-foreground hover:text-primary font-medium transition">Home</a>
-            <a href="#services" className="text-foreground hover:text-primary font-medium transition">Services</a>
-            <a href="#gallery" className="text-foreground hover:text-primary font-medium transition">Gallery</a>
-            <a href="#about" className="text-foreground hover:text-primary font-medium transition">About</a>
-            <a href="#contact" className="text-foreground hover:text-primary font-medium transition">Contact</a>
+            <a href="#" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Home</a>
+            <a href="#services" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Services</a>
+            <a href="#gallery" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Gallery</a>
+            <a href="#about" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">About</a>
+            <a href="#contact" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Contact</a>
           </div>
           
           <div className="flex items-center gap-4">
-            <a href="#book-now">
-              <Button className="bg-primary hover:bg-primary/90 text-white font-medium rounded-full">
-                Book Now
-              </Button>
-            </a>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <a href="#book-now">
+                <Button className="bg-gradient-gold hover:bg-accent text-accent-foreground font-medium rounded-full px-6 py-2 gold-glow">
+                  Book Now
+                </Button>
+              </a>
+            </motion.div>
             
             {/* Mobile Menu Button */}
             <button 

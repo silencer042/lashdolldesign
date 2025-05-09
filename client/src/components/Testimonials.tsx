@@ -166,7 +166,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Video testimonial prompt */}
+        {/* Video testimonial prompt & Google Reviews Button */}
         <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -177,9 +177,25 @@ export default function Testimonials() {
           <p className="text-lg mb-4">
             We'd love to hear about your experience with us! Share your story and tag us.
           </p>
-          <p className="text-primary font-medium text-lg">
+          <p className="text-primary font-medium text-lg mb-6">
             #LashDollNottingham
           </p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="flex justify-center"
+          >
+            <a 
+              href="https://g.page/r/LashDollNottingham/reviews" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-gradient-gold text-accent-foreground rounded-full transition-all hover:shadow-lg hover:scale-105 gold-glow font-medium"
+            >
+              <i className="fab fa-google mr-2"></i> See more on Google
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>
