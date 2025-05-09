@@ -83,7 +83,7 @@ const allServices = {
       icon: <i className="fas fa-eye"></i>,
       benefits: ["Natural-looking results", "Enhances your natural lashes", "Customized to your eye shape"],
       aftercare: ["Avoid water and steam for 24 hours", "Use oil-free products around eyes", "Don't rub or pull lashes"],
-      image: "https://images.unsplash.com/photo-1584271854089-9bb3e5168e32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Classic lashes.png"
     },
     {
       id: "volume-lashes",
@@ -95,7 +95,7 @@ const allServices = {
       icon: <i className="fas fa-fan"></i>,
       benefits: ["Dramatic, fuller appearance", "Customizable volume", "Lightweight comfort"],
       aftercare: ["Avoid oil-based products", "Gentle cleansing daily", "Regular infills every 2-3 weeks"],
-      image: "https://images.unsplash.com/photo-1587400788303-e65c4bbb42c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Volume lashes.png"
     },
     {
       id: "hybrid-lashes",
@@ -107,7 +107,7 @@ const allServices = {
       icon: <i className="fas fa-star-half-alt"></i>,
       benefits: ["Natural fullness with texture", "Custom ratio for your desired look", "Best of both classic and volume"],
       aftercare: ["Avoid oil-based skincare", "No rubbing or pulling", "Regular infills every 2-3 weeks"],
-      image: "https://images.unsplash.com/photo-1561569626-8e5e27dd9823?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Hybrid lashes.png"
     },
     {
       id: "lash-infills",
@@ -119,7 +119,7 @@ const allServices = {
       icon: <RefreshCw size={18} />,
       benefits: ["Maintains fullness", "More economical than a full set", "Extends the life of your lash extensions"],
       aftercare: ["Same aftercare as full sets", "Schedule regular infills", "Gentle cleansing to extend longevity"],
-      image: "https://images.unsplash.com/photo-1625992805557-605d0c0eec6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Lash infills.png"
     },
     {
       id: "lash-lift",
@@ -131,7 +131,7 @@ const allServices = {
       icon: <i className="fas fa-arrow-up"></i>,
       benefits: ["No maintenance required", "Lasts 6-8 weeks", "Enhances natural lashes"],
       aftercare: ["Keep lashes dry for 24 hours", "Avoid oil-based products", "No rubbing or harsh cleansers"],
-      image: "https://images.unsplash.com/photo-1493422884938-abd42cfa0f29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/lash lift & tint.png"
     }
   ],
   microblading: [
@@ -146,7 +146,7 @@ const allServices = {
       benefits: ["Natural-looking results", "Customized shape and color", "Semi-permanent (1-2 years)"],
       aftercare: ["Keep area dry for 7-10 days", "Avoid sun exposure", "No makeup on the area during healing"],
       precare: ["Avoid blood thinners", "No alcohol 24 hours before", "No tanning or sunburn"],
-      image: "https://images.unsplash.com/photo-1633643092028-b80630a64187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Microblading.png"
     },
     {
       id: "microblading-touchup",
@@ -158,7 +158,7 @@ const allServices = {
       icon: <i className="fas fa-sync-alt"></i>,
       benefits: ["Perfects initial results", "Extends longevity", "Adjusts color as needed"],
       aftercare: ["Same aftercare as initial treatment", "Avoid excessive sweating", "Protect from sun exposure"],
-      image: "https://images.unsplash.com/photo-1591687816303-0cdb7a301a50?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/attached_assets/Microblading touch-up.png"
     },
     {
       id: "brow-lamination",
