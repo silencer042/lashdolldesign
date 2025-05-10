@@ -123,7 +123,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-1">Visit Us</h4>
-                    <p className="text-foreground/80">15 Beauty Street, Nottingham, NG1 1AB</p>
+                    <p className="text-foreground/80">116 Hucknall Rd, Nottingham, NG5 1AD, UK</p>
                   </div>
                 </div>
                 
@@ -133,7 +133,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-1">Call Us</h4>
-                    <p className="text-foreground/80">+44 7123 456789</p>
+                    <p className="text-foreground/80">07871 311650</p>
                   </div>
                 </div>
                 
@@ -143,7 +143,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-1">Email Us</h4>
-                    <p className="text-foreground/80">info@lashdollnottingham.com</p>
+                    <p className="text-foreground/80">lashdollnottingham@mail.com</p>
                   </div>
                 </div>
                 
@@ -165,31 +165,13 @@ export default function Contact() {
                 
                 <div className="flex mt-10 space-x-4 justify-center">
                   <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/lashdollnottingham/" 
                     target="_blank" 
                     rel="noreferrer"
                     className="bg-gradient-gold hover:bg-accent text-accent-foreground rounded-full p-3 transition-all duration-300 gold-glow"
                     aria-label="Instagram"
                   >
                     <i className="fab fa-instagram"></i>
-                  </a>
-                  <a 
-                    href="https://facebook.com" 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="bg-gradient-gold hover:bg-accent text-accent-foreground rounded-full p-3 transition-all duration-300 gold-glow"
-                    aria-label="Facebook"
-                  >
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a 
-                    href="https://tiktok.com" 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="bg-gradient-gold hover:bg-accent text-accent-foreground rounded-full p-3 transition-all duration-300 gold-glow"
-                    aria-label="TikTok"
-                  >
-                    <i className="fab fa-tiktok"></i>
                   </a>
                 </div>
               </CardContent>

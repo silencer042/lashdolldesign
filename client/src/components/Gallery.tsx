@@ -150,10 +150,10 @@ export default function Gallery() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-lg">
-            <span className="font-medium">Follow us on Instagram</span> <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-primary">@lashdollnottingham</a> for more inspiration
+            <span className="font-medium">Follow us on Instagram</span> <a href="https://www.instagram.com/lashdollnottingham/" target="_blank" rel="noreferrer" className="text-primary">@lashdollnottingham</a> for more inspiration
           </p>
           <div className="flex items-center justify-center mt-2 gap-2">
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-primary hover:text-primary/80">
+            <a href="https://www.instagram.com/lashdollnottingham/" target="_blank" rel="noreferrer" className="text-primary hover:text-primary/80">
               <i className="fab fa-instagram text-2xl"></i>
             </a>
           </div>
