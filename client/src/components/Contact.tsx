@@ -48,6 +48,8 @@ export default function Contact() {
       email: "",
       phone: "",
       service: "",
+      date: "",
+      time: "",
       message: "",
     },
   });
@@ -56,15 +58,22 @@ export default function Contact() {
     setIsSubmitting(true);
     try {
       await apiRequest("POST", "/api/contact", data);
+      
+      // Format service name for display by replacing hyphens with spaces and capitalizing
+      const formattedService = data.service
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      
       toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll be in touch soon.",
+        title: "Booking Request Sent!",
+        description: `Thank you for scheduling a ${formattedService} appointment on ${data.date}. We'll confirm your booking shortly.`,
       });
       form.reset();
     } catch (error) {
       toast({
-        title: "Error",
-        description: "There was a problem sending your message. Please try again.",
+        title: "Booking Error",
+        description: "There was a problem scheduling your appointment. Please try again or call us directly.",
         variant: "destructive",
       });
     } finally {
@@ -198,7 +207,7 @@ export default function Contact() {
           >
             <Card className="h-full border-0 soft-shadow rounded-2xl overflow-hidden">
               <div className="h-40 relative">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80')" }}></div>
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/lush1.avif')" }}></div>
                 <div className="absolute inset-0 bg-gradient-pink opacity-60"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <h3 className="text-3xl font-bold font-serif-italic text-white">Book Your Appointment</h3>
@@ -314,6 +323,52 @@ export default function Contact() {
                       )}
                     />
                     
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="date"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground/90 font-medium">Preferred Date</FormLabel>
+                            <FormControl>
+                              <Input 
+                                type="date" 
+                                {...field} 
+                                className="w-full px-4 py-6 rounded-xl focus:ring-accent border-input/50 hover-glow"
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      
+                      <FormField
+                        control={form.control}
+                        name="time"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-foreground/90 font-medium">Preferred Time</FormLabel>
+                            <Select 
+                              onValueChange={field.onChange} 
+                              defaultValue={field.value}
+                            >
+                              <FormControl>
+                                <SelectTrigger className="w-full px-4 py-6 rounded-xl focus:ring-accent border-input/50 hover-glow">
+                                  <SelectValue placeholder="Select a time" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                <SelectItem value="morning">Morning (9AM - 12PM)</SelectItem>
+                                <SelectItem value="afternoon">Afternoon (12PM - 4PM)</SelectItem>
+                                <SelectItem value="evening">Evening (4PM - 8PM)</SelectItem>
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+                    
                     <FormField
                       control={form.control}
                       name="message"
@@ -344,11 +399,11 @@ export default function Contact() {
                       >
                         {isSubmitting ? (
                           <span className="flex items-center">
-                            <i className="fas fa-circle-notch fa-spin mr-2"></i> Sending...
+                            <i className="fas fa-circle-notch fa-spin mr-2"></i> Processing...
                           </span>
                         ) : (
                           <span className="flex items-center">
-                            <i className="fas fa-paper-plane mr-2"></i> Book Appointment
+                            <i className="fas fa-calendar-check mr-2"></i> Book My Appointment
                           </span>
                         )}
                       </Button>
