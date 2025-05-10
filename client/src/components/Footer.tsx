@@ -75,31 +75,13 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/lashdollnottingham/" 
                 target="_blank" 
                 rel="noreferrer"
                 className="text-gray-400 hover:text-accent transition-all duration-300 gold-glow text-xl"
                 aria-label="Instagram"
               >
                 <i className="fab fa-instagram"></i>
-              </a>
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noreferrer"
-                className="text-gray-400 hover:text-accent transition-all duration-300 gold-glow text-xl"
-                aria-label="Facebook"
-              >
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a 
-                href="https://tiktok.com" 
-                target="_blank" 
-                rel="noreferrer"
-                className="text-gray-400 hover:text-accent transition-all duration-300 gold-glow text-xl"
-                aria-label="TikTok"
-              >
-                <i className="fab fa-tiktok"></i>
               </a>
             </div>
           </motion.div>
@@ -156,10 +138,18 @@ export default function Footer() {
                 <span className="text-accent">10:00 - 16:00</span>
               </li>
             </ul>
-            <div className="mt-6 bg-gray-800/50 p-4 rounded-lg">
+            <div className="mt-6 bg-gray-800/50 p-4 rounded-lg space-y-2">
+              <p className="text-gray-300 flex items-center">
+                <i className="fas fa-map-marker-alt text-accent mr-2"></i>
+                116 Hucknall Rd, Nottingham, NG5 1AD
+              </p>
               <p className="text-gray-300 flex items-center">
                 <i className="fas fa-phone-alt text-accent mr-2"></i>
-                +44 7123 456789
+                07871 311650
+              </p>
+              <p className="text-gray-300 flex items-center">
+                <i className="fas fa-envelope text-accent mr-2"></i>
+                lashdollnottingham@mail.com
               </p>
             </div>
           </motion.div>

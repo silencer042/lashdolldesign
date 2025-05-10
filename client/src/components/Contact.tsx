@@ -110,7 +110,7 @@ export default function Contact() {
           >
             <Card className="h-full bg-accent/5 border-0 soft-shadow rounded-2xl overflow-hidden">
               <div className="h-40 relative">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522337094846-8a818192de1f?auto=format&fit=crop&w=800&q=80')" }}></div>
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/office.png')" }}></div>
                 <div className="absolute inset-0 bg-gradient-gold opacity-40"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <h3 className="text-3xl font-bold font-serif-italic text-white">Contact Details</h3>
