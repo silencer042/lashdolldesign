@@ -173,6 +173,24 @@ export default function Contact() {
                   >
                     <i className="fab fa-instagram"></i>
                   </a>
+                  <a 
+                    href="#" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="bg-gradient-gold hover:bg-accent text-accent-foreground rounded-full p-3 transition-all duration-300 gold-glow"
+                    aria-label="Facebook"
+                  >
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a 
+                    href="#" 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="bg-gradient-gold hover:bg-accent text-accent-foreground rounded-full p-3 transition-all duration-300 gold-glow"
+                    aria-label="TikTok"
+                  >
+                    <i className="fab fa-tiktok"></i>
+                  </a>
                 </div>
               </CardContent>
             </Card>
