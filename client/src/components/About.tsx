@@ -17,7 +17,7 @@ export default function About() {
           >
             <div className="relative">
               <img 
-                src="@assets/office.png" 
+                src="/office.png" 
                 alt="Lash Doll Nottingham Beauty Experience" 
                 className="rounded-xl shadow-lg w-full h-auto object-cover z-10 relative"
               />
