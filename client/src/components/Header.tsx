@@ -28,7 +28,7 @@ export default function Header() {
           >
             <a href="#" className="block">
               <img 
-                src="/attached_assets/Lushdoll logo.png" 
+                src="/lushdoll-logo.png" 
                 alt="Lash Doll Nottingham" 
                 className={`h-14 transition-all duration-300 ${isScrolled ? 'brightness-90' : 'brightness-100'}`}
               />
