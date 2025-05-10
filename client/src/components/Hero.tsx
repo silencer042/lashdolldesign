@@ -8,8 +8,8 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1570003179394-40b59f9b4a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
-          filter: "brightness(0.85)"
+          backgroundImage: "url('/hero.png')",
+          filter: "brightness(0.95)"
         }}
       />
       

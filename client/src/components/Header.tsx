@@ -38,9 +38,10 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <a href="#" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Home</a>
+            <a href="#about" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">About</a>
             <a href="#services" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Services</a>
             <a href="#gallery" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Gallery</a>
-            <a href="#about" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">About</a>
+            <a href="#testimonials" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Reviews</a>
             <a href="#contact" className="text-foreground hover:text-primary font-medium transition-all hover:scale-105">Contact</a>
           </div>
           
@@ -79,6 +80,13 @@ export default function Header() {
                 Home
               </a>
               <a 
+                href="#about" 
+                className="text-foreground hover:text-primary py-2 font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
                 href="#services" 
                 className="text-foreground hover:text-primary py-2 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -93,11 +101,11 @@ export default function Header() {
                 Gallery
               </a>
               <a 
-                href="#about" 
+                href="#testimonials" 
                 className="text-foreground hover:text-primary py-2 font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                About
+                Reviews
               </a>
               <a 
                 href="#contact" 
