@@ -42,7 +42,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-accent/5 bg-soft-texture">
+    <section id="testimonials" className="py-20 bg-accent/5 bg-soft-texture">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
