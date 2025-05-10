@@ -33,7 +33,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Indulge in our exquisite lash services and treat yourself to flawless beauty.
+            Indulge in our premium beauty services, from flawless lashes to rejuvenating skincare treatments.
           </motion.p>
           
           <motion.div 

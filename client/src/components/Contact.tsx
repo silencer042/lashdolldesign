@@ -30,6 +30,8 @@ const formSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   phone: z.string().min(10, "Please enter a valid phone number"),
   service: z.string().min(1, "Please select a service"),
+  date: z.string().min(1, "Please select a date"),
+  time: z.string().min(1, "Please select a time"),
   message: z.string().optional(),
 });
 
@@ -198,8 +200,9 @@ export default function Contact() {
               <div className="h-40 relative">
                 <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80')" }}></div>
                 <div className="absolute inset-0 bg-gradient-pink opacity-60"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <h3 className="text-3xl font-bold font-serif-italic text-white">Book Your Appointment</h3>
+                  <p className="text-white text-center mt-2 max-w-xs px-4">Schedule your appointment now!</p>
                 </div>
               </div>
               <CardContent className="p-8">
@@ -279,11 +282,31 @@ export default function Contact() {
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="classic">Classic Lashes</SelectItem>
-                              <SelectItem value="volume">Volume Lashes</SelectItem>
-                              <SelectItem value="hybrid">Hybrid Lashes</SelectItem>
+                              {/* Lash Services */}
+                              <SelectItem value="classic-lashes">Classic Lashes</SelectItem>
+                              <SelectItem value="volume-lashes">Volume Lashes</SelectItem>
+                              <SelectItem value="hybrid-lashes">Hybrid Lashes</SelectItem>
+                              <SelectItem value="lash-infills">Lash Infills</SelectItem>
+                              <SelectItem value="lash-lift-tint">Lash Lift & Tint</SelectItem>
+                              
+                              {/* Brow Services */}
                               <SelectItem value="microblading">Microblading</SelectItem>
-                              <SelectItem value="lips">Lip Enhancement</SelectItem>
+                              <SelectItem value="microblading-touchup">Microblading Touch-up</SelectItem>
+                              <SelectItem value="brow-lamination">Brow Lamination</SelectItem>
+                              
+                              {/* Skin Treatments */}
+                              <SelectItem value="dermaplaning">Dermaplaning</SelectItem>
+                              <SelectItem value="microneedling">Microneedling</SelectItem>
+                              <SelectItem value="glass-skin-facial">Glass Skin Facial</SelectItem>
+                              
+                              {/* Fillers & Anti-Wrinkle */}
+                              <SelectItem value="anti-wrinkle">Anti-Wrinkle Treatment</SelectItem>
+                              <SelectItem value="lip-fillers">Lip Fillers</SelectItem>
+                              <SelectItem value="dermal-fillers">Dermal Fillers</SelectItem>
+                              
+                              {/* Bundle Packages */}
+                              <SelectItem value="lash-brow-bundle">Lash & Brow Bundle</SelectItem>
+                              <SelectItem value="rejuvenation-package">Rejuvenation Package</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
