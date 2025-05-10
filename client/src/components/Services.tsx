@@ -320,17 +320,17 @@ export default function Services() {
           onValueChange={setActiveCategory}
           className="mb-12"
         >
-          <div className="flex justify-center mb-8">
-            <TabsList className="bg-secondary/50 p-1 rounded-full">
+          <div className="flex justify-center mb-8 overflow-x-auto pb-2 max-w-full">
+            <TabsList className="bg-secondary/50 p-1 rounded-full flex-nowrap whitespace-nowrap">
               {categories.map((category) => (
                 <TabsTrigger 
                   key={category.id} 
                   value={category.id}
-                  className="px-6 py-3 rounded-full data-[state=active]:bg-primary data-[state=active]:text-white transition-all duration-300"
+                  className="px-3 sm:px-6 py-3 rounded-full data-[state=active]:bg-primary data-[state=active]:text-white transition-all duration-300 flex-shrink-0"
                 >
                   <span className="flex items-center">
                     <span className="mr-2">{category.icon}</span>
-                    {category.label}
+                    <span className="text-xs sm:text-sm md:text-base">{category.label}</span>
                   </span>
                 </TabsTrigger>
               ))}
