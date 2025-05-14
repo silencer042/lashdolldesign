@@ -1,0 +1,52 @@
+
+I’m working on my website for Lash Doll Nottingham on Replit, and I’m encountering an issue where most of the images on the site are not displaying correctly in the preview. Instead of showing images, I only see blank spaces where they should be. I’ve double-checked the file paths and image sources, but the issue persists.
+
+What I’ve Done So Far:
+Images are correctly placed in the project directory (and the paths are referenced correctly in the HTML).
+
+The images are linked as follows in the HTML:
+
+html
+Copy
+<img src="path/to/image.jpg" alt="image description">
+I’ve checked the image names and ensured there are no special characters or spaces in the file names.
+
+I’ve optimized the images for the web to reduce their file size.
+
+Images are stored in the same directory (no external hosting involved at the moment).
+
+What’s Happening:
+The images are not showing up on the page. Instead, the space where the images should appear is blank.
+
+The issue occurs for most of the images across the site (for example, in the service cards, gallery, etc.).
+
+There is no error message in the developer console, but when I inspect the image element, it shows as an empty space.
+
+Questions for You:
+File Path Issue: Could the image paths be incorrectly referenced, even though they seem correct in the code? Can you check if the images are correctly linked?
+
+CSS Visibility: Is there a chance that CSS rules (such as visibility, display, opacity) are causing the images to be hidden? Could you inspect the CSS to confirm?
+
+Image File Names and Extensions: I’ve made sure the image file names do not contain spaces or special characters. Could there still be an issue with how they are named or referenced? Are there any other common causes I might have missed?
+
+Browser Console Errors: Should I expect any 404 errors or other issues when I check the browser console? Is there something in the console that might indicate why the images are not loading?
+
+External Hosting: If the images are hosted on an external service (e.g., another server or CDN), could there be CORS issues preventing them from being displayed?
+
+What I Need Help With:
+Could you help me determine why the images are not showing up in the preview?
+
+Could you review the HTML and CSS to check for any issues with file paths, visibility, or other issues that could prevent the images from loading?
+
+If there is a problem with the image file paths or extensions, could you help me resolve it?
+
+Please inspect the console for any error messages related to missing resources or other issues.
+
+I’d appreciate your assistance in fixing this issue and getting the images to display properly on the website.
+
+Thank you in advance!
+
+Additional Suggestions (Optional):
+Test the Image Paths: I’ve tried checking the image URLs by accessing them directly in a browser, but I’m not sure if they’re accessible or if there’s something wrong with the links.
+
+Test Different Browsers: Can you confirm if this issue is occurring in all browsers, or if it’s just a specific one? I’ve tried Chrome and Firefox, but I’m still facing the issue.
