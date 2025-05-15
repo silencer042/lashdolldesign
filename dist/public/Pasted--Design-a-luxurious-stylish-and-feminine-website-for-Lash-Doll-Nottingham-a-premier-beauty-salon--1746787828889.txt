@@ -1,0 +1,164 @@
+
+Design a luxurious, stylish, and feminine website for Lash Doll Nottingham, a premier beauty salon specializing in eyelash extensions, microblading, and lip enhancements. The website must reflect the salon’s high-end, personalized services and elegance, while being highly functional and engaging. The design should include beautiful imagery, interactive elements, and seamless booking options, all while maintaining a consistent pink and soft color palette that exudes sophistication.
+
+1. Branding & Visual Identity
+Color Palette:
+
+Primary Colors: Soft baby pink, blush pink, and rose gold to create a feminine and elegant aesthetic.
+
+Secondary Colors: Light ivory for a clean background, and dark gray or charcoal for text to create contrast and readability.
+
+Typography:
+
+Use luxurious serif fonts for headings (e.g., Playfair Display or Lora) to create an elegant and timeless feel.
+
+Use modern sans-serif fonts for body text (e.g., Roboto, Open Sans) for readability and sophistication.
+
+Imagery:
+
+High-quality, Instagram-worthy visuals showcasing the salon's work (e.g., before and after lash extensions, client transformations, luxurious salon interior).
+
+Soft-focused and bright, elegant imagery to capture the essence of beauty and femininity.
+
+2. Hero Section
+Headline: “Luxury Lashes, Unmatched Perfection”
+
+Subheading: “Indulge in our exquisite lash services and treat yourself to flawless beauty.”
+
+Call to Action (CTA): “Book Your Appointment” or “View Our Services”
+
+Visual: Full-screen background video or high-quality image of the salon’s interior, showing the beauty of the workspace and the luxurious experience. Optionally, the video could be of a client receiving lash extensions in a calm, feminine environment.
+
+3. Services Section
+Service Categories:
+
+Classic Lashes: Highlight the natural look with single lash extensions.
+
+Volume Lashes: Showcase the dramatic, fuller look with multiple lash extensions.
+
+Hybrid Lashes: Combine classic and volume lashes for a customized effect.
+
+Microblading: Include a dedicated section for microblading services with a description of the process and benefits.
+
+Lip Fillers: Include a lip enhancement section for clients interested in fuller lips.
+
+Service Cards:
+
+Hover Effects: Use soft hover effects on each service card, displaying more information and pricing when hovered over.
+
+Book Now buttons should be clearly visible on each service card, allowing users to book services directly.
+
+Microblading (new service):
+
+Highlight the microblading process with pre-care and post-care instructions, emphasizing the salon’s expertise and safety protocols.
+
+Provide clear CTAs for consultations and appointments for microblading services.
+
+4. Gallery Section
+Before-and-After Transformations:
+
+Display before and after photos of eyelash extensions, microblading, and lip fillers to showcase the transformations.
+
+Use a slider gallery for easy navigation through different service results.
+
+Instagram Feed Integration:
+
+Integrate the Instagram feed to dynamically show recent photos from the salon's Instagram profile, highlighting client transformations, salon events, and promotions.
+
+This helps keep the website updated and visually engaging.
+
+5. About Us Section
+Our Story:
+
+Share the story of Lash Doll Nottingham, how the salon started, and its mission to provide luxury lash and beauty services.
+
+Include the founder’s story and expertise in the beauty industry.
+
+Why Choose Us?:
+
+Highlight certified artists, premium products, and personalized service.
+
+Mention the cutting-edge techniques used in all services, including microblading and lash extensions.
+
+6. Testimonials & Client Love
+Client Testimonials:
+
+Add a carousel slider or grid layout to showcase client reviews. Include star ratings and feedback about the quality of service and customer experience.
+
+Feature both before and after photos and testimonials to enhance authenticity.
+
+7. Contact & Booking Section
+Booking System:
+
+Include a simple, user-friendly booking system where users can easily book their appointments for lash services, microblading, and lip fillers.
+
+Add a consultation booking option for services like microblading and lip fillers to ensure the client meets the necessary requirements.
+
+Contact Form:
+
+Add a clean, minimalistic contact form for general inquiries, with a thank you message displayed after submission.
+
+Salon Location & Map:
+
+Embed a Google map of the salon’s location for easy navigation, with the address and contact information displayed prominently.
+
+8. Footer Section
+Quick Links:
+
+Provide links to important pages such as Home, Services, Gallery, Contact, and About Us.
+
+Social Media Links:
+
+Include icons that link to the salon’s Instagram, Facebook, and TikTok profiles.
+
+Opening Hours:
+
+Clearly display the salon’s working hours and availability for easy access.
+
+9. Additional Features
+Smooth Animations & Microinteractions:
+
+Implement smooth scrolling animations for an engaging user experience. Use fade-in effects as users scroll down each section to enhance interactivity.
+
+Sticky Navigation:
+
+Ensure that the navigation bar stays sticky at the top while scrolling, making it easy to navigate to different sections like services, gallery, and bookings.
+
+Hover Animations:
+
+Use subtle hover effects for buttons, images, and links to increase interactivity (e.g., scaling up on hover or a smooth color transition).
+
+Testimonial Carousel:
+
+Include a rotating carousel for testimonials, where clients can scroll through real reviews and experiences. Add ratings alongside each testimonial.
+
+10. Mobile Optimization
+Responsive Design:
+
+The website must be fully responsive, ensuring all elements adapt to mobile and tablet devices. Given that many users may visit the site from their mobile devices to book appointments or browse services, it’s important that the website remains user-friendly across all platforms.
+
+Mobile Booking & Navigation:
+
+Ensure that the booking system is easily accessible from mobile and that the navigation remains straightforward with a mobile-friendly menu.
+
+11. Overall Tone & Feel
+Luxury & Elegance:
+
+The design should exude a high-end, luxurious feel while remaining approachable and client-centric.
+
+Every element should reflect quality, from the images to the content and interactive features.
+
+Feminine & Professional:
+
+The site should embody a feminine aesthetic—soft pink tones, elegant fonts, and professional imagery—all designed to make clients feel pampered and cared for.
+
+Interactive & Engaging:
+
+The website should feel dynamic, encouraging clients to interact with various sections, book services, and engage with the salon’s content.
+
+Replit Development Goals:
+Integrate interactive features such as hover effects, smooth animations, and dynamic content (Instagram feed).
+
+Ensure mobile-first design for a seamless user experience on any device.
+
+Implement a robust booking system and contact forms with easy-to-use interfaces.
